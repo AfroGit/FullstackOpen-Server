@@ -2,8 +2,9 @@
 
 Implement a Node application that returns a hardcoded list of phonebook entries from the address http://localhost:3001/api/persons. */ 
 
+const http = require('http')
 const express = require('express')
-const app = express()
+// const app = express()
 
 let persons = [
     { 
@@ -28,6 +29,16 @@ let persons = [
     }
 ]
 
-app.get('/api/persons', (req, res) => {
-  res.json
+const app = http.createServer((request, response) => {
+  response.writeHead(200, { 'Content-Type': 'application/json' })
+  response.end(JSON.stringify(persons))
 })
+
+// app.get('/info', (request, response) => {
+//   const currentDate = new Date()
+//   response.send(`<h3>Phonebook has info for ${persons.length} people</h3><h3>${currentDate}</h3>`)
+// })
+
+const PORT = 3001
+app.listen(PORT)
+console.log(`Server running on port ${PORT}`)
