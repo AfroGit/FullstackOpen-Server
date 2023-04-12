@@ -5,7 +5,7 @@ Implement a Node application that returns a hardcoded list of phonebook entries 
 const express = require('express')
 const app = express()
 
-[
+let persons = [
     { 
       "id": 1,
       "name": "Arto Hellas", 
@@ -27,3 +27,7 @@ const app = express()
       "number": "39-23-6423122"
     }
 ]
+
+app.get('/api/persons', (req, res) => {
+  res.json
+})
