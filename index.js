@@ -84,7 +84,7 @@ app.post('/api/persons', (req, res) => {
     return res.status(400).json({error: 'Name is Missing'})
   }
   
-  if(!body.number){//
+  if(!body.number){//confirms if entry is a digit
     return res.status(418).json({error: 'Number is Missing'})
   }
   
