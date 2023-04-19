@@ -24,8 +24,8 @@
     "url": "https://github.com/AfroGit/FullstackOpen-Homework/issues"
   },
   "homepage": "https://github.com/AfroGit/FullstackOpen-Homework#readme",
-  "description": "",
   "devDependencies": {
     "nodemon": "^2.0.22"
-  }
+  },
+  "description": ""
 }
